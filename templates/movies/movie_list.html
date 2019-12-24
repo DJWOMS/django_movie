@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <!-- //Meta tag Keywords -->
+    <title>Clack Website Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- //Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <!-- Bootstrap-Core-CSS -->
+    <!--/ Style-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all">
+    <!--// Style-CSS -->
+    <!-- font-awesome-icons -->
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <!-- /Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700"
+          rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
+          rel="stylesheet">
+    <!-- //Fonts -->
+</head>
+
+<body>
+
+<div id="page" class="page"><!-- mian-content -->
+    <div class="main-banner bg bg1" id="home"
+         style="background-color: rgba(0, 0, 0, 0); margin-top: 0px; background-image: url({% static 'single-post-pic.jpg' %};);">
+        <!-- header -->
+        <header class="header">
+            <div class="container-fluid px-lg-5">
+                <!-- nav -->
+                <nav class="py-4">
+                    <div id="logo">
+                        <h1><a href="index.html" class="editContent"
+                               style="outline: none; outline-offset: -2px; cursor: inherit; color: rgb(255, 255, 255); font-size: 40px; background-color: rgba(0, 0, 0, 0); font-family: &quot;Source Sans Pro&quot;, sans-serif;">DjangoMovie</a>
+                        </h1>
+                    </div>
+
+                    <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop">
+                    <ul class="menu mt-2">
+                        <li class="active"><a href="index.html">Главная</a></li>
+                        <li>
+                            <!-- First Tier Drop Down -->
+                            <label for="drop-2" class="toggle">Категории <span
+                                    class="fa fa-angle-down" aria-hidden="true"></span> </label>
+                            <a href="#">Категории <span class="fa fa-angle-down"
+                                                        aria-hidden="true"></span></a>
+                            <input type="checkbox" id="drop-2">
+                            <ul>
+                                <li><a href="moviesingle.html">Фильмы</a></li>
+                                <li><a href="moviesingle.html">Сериалы</a></li>
+                                <li><a href="moviesingle.html">Мультфильмы</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html"
+                               style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">Вход</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- //nav -->
+            </div>
+        </header>
+        <!-- //header -->
+        <!--/banner-->
+        <div class="banner-info">
+            <p class="editContent">лучший сайт на django 3</p>
+            <h3 class="mb-4 editContent">Все о кино</h3>
+            <div class="ban-buttons">
+
+
+            </div>
+        </div>
+        <!--// banner-inner -->
+
+    </div>
+    <!--//main-content-->
+    <!---->
+    <ol class="breadcrumb editContent">
+        <li class="breadcrumb-item">
+            <a href="index.html" class="editContent">Home</a>
+        </li>
+        <li class="breadcrumb-item active editContent">Single Page</li>
+    </ol>
+    <!---->
+    <!-- banner -->
+    <section class="ab-info-main py-md-5 py-4 editContent"
+             style="padding-left: 3rem; padding-right: 3rem;">
+        <div class="container-fluid py-md-3">
+            <div class="row">
+                <div class="side-bar col-lg-3">
+
+                    <div class="search-bar w3layouts-newsletter">
+                        <h3 class="sear-head editContent">Поиск фильма</h3>
+                        <form action="#" method="post" class="d-flex editContent">
+                            <input type="search" placeholder="Введите название..." name="search"
+                                   class="form-control" required="">
+                            <button class="btn1 btn"><span class="fa fa-search"
+                                                           aria-hidden="true"></span></button>
+                        </form>
+                    </div>
+                    <!--preference -->
+                    <div class="left-side my-4">
+                        <h3 class="sear-head editContent">Жанры</h3>
+                        <ul class="w3layouts-box-list">
+                            <li class="editContent">
+                                <input type="checkbox" class="checked">
+                                <span class="span editContent">Аниме</span>
+                            </li>
+                            <li class="editContent">
+                                <input type="checkbox" class="checked">
+                                <span class="span editContent">Боевики</span>
+                            </li>
+                            <li class="editContent">
+                                <input type="checkbox" class="checked">
+                                <span class="span editContent">Комедии</span>
+                            </li>
+                            <li class="editContent">
+                                <input type="checkbox" class="checked">
+                                <span class="span editContent">Ужасы</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- // preference -->
+                    <!-- discounts -->
+                    <div class="left-side">
+                        <h3 class="sear-head editContent">Год</h3>
+                        <ul class="w3layouts-box-list">
+                            <li class="editContent">
+                                <input type="checkbox" class="checked">
+                                <span class="span editContent">2020</span>
+                            </li>
+                            <li class="editContent">
+                                <input type="checkbox" class="checked">
+                                <span class="span editContent">2019</span>
+                            </li>
+                            <li class="editContent">
+                                <input type="checkbox" class="checked">
+                                <span class="span editContent">2018</span>
+                            </li>
+                            <li>
+                                <input type="checkbox" class="checked">
+                                <span class="span editContent">2017</span>
+                            </li>
+                            <li class="editContent">
+                                <input type="checkbox" class="checked">
+                                <span class="span editContent">2016</span>
+                            </li>
+                            <li class="editContent">
+                                <input type="checkbox" class="checked">
+                                <span class="span editContent">2015</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //discounts -->
+                    <!-- reviews -->
+                    <div class="customer-rev left-side my-4">
+                        <h3 class="sear-head editContent">Рейтинг</h3>
+                        <ul class="w3layouts-box-list">
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="editContent">5.0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"></span>
+                                    <span class="editContent">4.0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star-half-o" aria-hidden="true"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"></span>
+                                    <span class="editContent">3.5</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"></span>
+                                    <span class="editContent">3.0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star" aria-hidden="true"></span>
+                                    <span class="fa fa-star-half-o" aria-hidden="true"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"></span>
+                                    <span class="fa fa-star-o" aria-hidden="true"></span>
+                                    <span class="editContent">2.5</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //reviews -->
+                    <!-- deals -->
+                    <div class="deal-leftmk left-side">
+                        <h3 class="sear-head editContent">Последние добавленные</h3>
+                        <div class="special-sec1 row mt-3 editContent">
+                            <div class="img-deals col-md-4">
+                                <img src="bundles/images/s4.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="img-deal1 col-md-4">
+                                <h3 class="editContent">Рэмбо: Последняя кровь</h3>
+                                <a href="moviesingle.html" class="editContent"></a>
+                            </div>
+
+                        </div>
+                        <div class="special-sec1 row mt-3 editContent">
+                            <div class="img-deals col-md-4">
+                                <img src="bundles/images/s2.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="img-deal1 col-md-8">
+                                <h3 class="editContent">Холодное сердце 2</h3>
+                                <a href="moviesingle.html" class="editContent"></a>
+                            </div>
+
+                        </div>
+                        <div class="special-sec1 row mt-3 editContent">
+                            <div class="img-deals col-md-4">
+                                <img src="bundles/images/s1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="img-deal1 col-md-8">
+                                <h3 class="editContent">К звездам</h3>
+                                <a href="moviesingle.html" class="editContent"></a>
+                            </div>
+
+                        </div>
+                        <div class="special-sec1 row mt-3 editContent">
+                            <div class="img-deals col-md-4">
+                                <img src="bundles/images/s5.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="img-deal1 col-md-8">
+                                <h3 class="editContent">Терминатор: Темные судьбы</h3>
+                                <a href="moviesingle.html" class="editContent"></a>
+                            </div>
+
+                        </div>
+                        <div class="special-sec1 row mt-3 editContent">
+                            <div class="img-deals col-md-4">
+                                <img src="bundles/images/s3.jpg" class="img-fluid" alt="">
+                            </div>
+                            <div class="img-deal1 col-md-8">
+                                <h3 class="editContent">Джокер</h3>
+                                <a href="moviesingle.html" class="editContent"></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- //deals -->
+
+                </div>
+                <!-- //product left -->
+                <!-- product right -->
+                <div class="left-ads-display col-lg-9">
+                    <div class="row">
+                        {% for movie in movie_list %}
+                            <div class="col-md-4 product-men">
+                                <div class="product-shoe-info editContent text-center mt-lg-4">
+                                    <div class="men-thumb-item">
+                                        <img src="{{ movie.poster.url }}" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="item-info-product">
+                                        <h4 class="">
+                                            <a href="{{ movie.get_absolute_url}}" class="editContent">
+                                                {{ movie.title }}
+                                            </a>
+                                        </h4>
+
+                                        <div class="product_price">
+                                            <div class="grid-price">
+                                                <span class="money editContent">{{ movie.tagline }}</span>
+                                            </div>
+                                        </div>
+                                        <ul class="stars">
+                                            <li><a href="#"><span class="fa fa-star"
+                                                                  aria-hidden="true"></span></a>
+                                            </li>
+                                            <li><a href="#"><span class="fa fa-star"
+                                                                  aria-hidden="true"></span></a>
+                                            </li>
+                                            <li><a href="#"><span class="fa fa-star-half-o"
+                                                                  aria-hidden="true"></span></a>
+                                            </li>
+                                            <li><a href="#"><span class="fa fa-star-half-o"
+                                                                  aria-hidden="true"></span></a>
+                                            </li>
+                                            <li><a href="#"><span class="fa fa-star-o"
+                                                                  aria-hidden="true"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <!--<div class="grid-img-right mt-4 text-right bg bg1" >
+                        <span class="money editContent" >Flat 50% Off</span>
+                        <a href="moviesingle.html" class="btn" >Now</a>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //contact -->
+    <!-- footer -->
+    <footer class="editContent">
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-lg-4 footer-grid_section_w3layouts">
+                    <h2 class="logo-2 mb-lg-4 mb-3">
+                        <a href="index.html" class="editContent">
+                                <span class="fa" aria-hidden="true">
+                                    Django School
+                                </span>
+                        </a>
+                    </h2>
+                    <p class="editContent">
+                        Канал для программистов и людей, которые хотят развиваться в сфере IT.
+                        Видео уроки по python 3, Django 2, Django 3, JavaScript, Vue.js, HTML, CSS
+                        и многое другое.
+                    </p>
+                    <h4 class="sub-con-fo ad-info my-4 editContent">Catch on Social</h4>
+                    <ul class="w3layouts_social_list media-soc list-unstyled">
+                        <li>
+                            <a href="#" class="w3pvt_facebook editContent">
+                                <span class="fa fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="w3pvt_twitter editContent">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="w3pvt_dribble editContent">
+                                <span class="fa fa-dribbble"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="w3pvt_google editContent">
+                                <span class="fa fa-google-plus"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-8 footer-right">
+                    <div class="w3layouts-news-letter">
+                        <h3 class="footer-title text-uppercase editContent mb-lg-4 mb-3">
+                            Newsletter</h3>
+
+                        <p class="editContent">By subscribing to our mailing list you will always
+                            get latest news and updates from us.</p>
+                        <form action="#" method="post" class="w3layouts-newsletter">
+                            <input type="email" name="Email" class="editContent"
+                                   placeholder="Enter your email..." required="">
+                            <button class="btn1 btn"><span class="fa fa-paper-plane-o"
+                                                           aria-hidden="true"></span></button>
+
+                        </form>
+                    </div>
+                    <div class="row mt-lg-4 bottom-w3layouts-sec-nav mx-0">
+                        <div class="col-md-4 footer-grid_section_w3layouts">
+                            <h3 class="footer-title text-uppercase editContent mb-lg-4 mb-3">
+                                Разделы</h3>
+                            <ul class="list-unstyled w3layouts-icons">
+                                <li>
+                                    <a href="index.html" class="editContent">Главная</a>
+                                </li>
+                                <li>
+                                    <a href="about.html" class="editContent">Категории</a>
+                                </li>
+                                <li>
+                                    <a href="contact.html" class="editContent">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 footer-grid_section_w3layouts">
+                            <!-- social icons -->
+                            <div class="agileinfo_social_icons">
+                                <h3 class="footer-title text-uppercase editContent mb-lg-4 mb-3">
+                                    Pages</h3>
+                                <ul class="list-unstyled w3layouts-icons">
+
+                                    <li>
+                                        <a href="#" class="editContent">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="editContent">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="editContent">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="editContent">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="editContent">About Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- social icons -->
+                        </div>
+                        <div class="col-md-4 footer-grid_section_w3layouts my-md-0 my-5">
+                            <h3 class="footer-title text-uppercase text-wh mb-lg-4 mb-3 editContent">
+                                Contact Info</h3>
+                            <div class="contact-info">
+                                <div class="footer-address-inf my-4">
+                                    <h4 class="ad-info mb-2 editContent">Email </h4>
+                                    <p class="editContent"><a href="mailto:info@example.com">info@example.com</a>
+                                    </p>
+                                </div>
+                                <div class="footer-address-inf">
+                                    <h4 class="ad-info mb-2 editContent">Location</h4>
+                                    <p class="editContent">New York City</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <div class="cpy-right py-3">
+        <div class="container">
+            <div class="row">
+                <p class="col-md-10 text-left">© 2019 DjangoMovie. All rights reserved | Design by
+                    <a href="https://djangochannel.com"> DJANGO SCHOOL.</a>
+                </p>
+                <!-- move top icon -->
+                <a href="#home" class="move-top text-right col-md-2"><span
+                        class="fa fa-long-arrow-up" aria-hidden="true"></span></a>
+                <!-- //move top icon -->
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+asgiref==3.2.3
+Click==7.0
+Django==3.0
+h11==0.9.0
+httptools==0.0.13
+Pillow==6.2.1
+pytz==2019.3
+sqlparse==0.3.0
+uvicorn==0.11.1
+uvloop==0.14.0
+websockets==8.1

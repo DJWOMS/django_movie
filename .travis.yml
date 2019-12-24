@@ -1,0 +1,19 @@
+language: python
+python:
+  - "3.8"
+env:
+  - DJANGO=3.0 DB=sqlite3
+before_install:
+  - export DJANGO_SETTINGS_MODULE=DS.settings
+install:
+  - pip install -r req.txt
+  - pip install coverage
+  - pip install coveralls
+script:
+  - python manage.py makemigrations
+  - python manage.py migrate
+  - python manage.py test
+  - coverage run manage.py test
+after_success:
+  - coverage report
+  - coveralls

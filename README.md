@@ -9,6 +9,17 @@
 [Сайт](https://djangochannel.com)
 [YouTube](https://www.youtube.com/channel/UC_hPYclmFCIENpMUHpPY8FQ?view_as=subscriber)
 
-### Описание проекта:
-Проект кино библиотеки на Django 3.
+Кинобиблиотеки на Django 3.
+
+Проект написан в рамках обучающего курса по Django 3 на youtube.
+
+- Категории
+- Жанры
+- Фильмы
+- Кадры из фильма
+- Режиссеры\Актеры
+- Звезды рейтинга
+- Отзывы
+- Фильтры
+
 

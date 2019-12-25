@@ -403,7 +403,11 @@ li > a:only-child:after {
     position: relative;
     min-height: 20em;
 }
-
+.bg1 {
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 0;
+    background-image: url('../single-post-pic.jpg');
+}
 /*-- place holder --*/
 
 .banner-form ::-webkit-input-placeholder {

@@ -9,7 +9,7 @@
 [Сайт](https://djangochannel.com)
 [YouTube](https://www.youtube.com/channel/UC_hPYclmFCIENpMUHpPY8FQ?view_as=subscriber)
 
-Кинобиблиотеки на Django 3.
+Кинобиблиотека на Django 3.
 
 Проект написан в рамках обучающего курса по Django 3 на youtube.
 

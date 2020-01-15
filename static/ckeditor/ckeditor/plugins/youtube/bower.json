@@ -1,0 +1,19 @@
+{
+  "name": "ckeditor-youtube-plugin",
+  "version": "2.1.14",
+  "homepage": "https://github.com/fonini/ckeditor-youtube-plugin",
+  "authors": [
+    "Jonnas Fonini"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ckeditor": ">= 4.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

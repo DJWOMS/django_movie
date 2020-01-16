@@ -107,7 +107,7 @@ class MovieAdmin(admin.ModelAdmin):
 
 @admin.register(Reviews)
 class ReviewAdmin(admin.ModelAdmin):
-    """Отзывы"""
+    """Отзывы к фильму"""
     list_display = ("name", "email", "parent", "movie", "id")
     readonly_fields = ("name", "email")
 

@@ -30,15 +30,19 @@
                         <span><b>Слоган:</b> {{ movie.tagline }}</span>
                     </li>
                     <li style="list-style: none">
-                                    <span><b>Режиссер:</b>
-                                        {% for director in movie.directors.all %}
-                                            {{ director.name }}
-                                        {% endfor %}
-                                    </span>
+                        <span><b>Режиссер:</b>
+                            {% for director in movie.directors.all %}
+                                <a href="{{ director.get_absolute_url }}">
+                                    {{ director.name }}
+                                </a>
+                            {% endfor %}
+                        </span>
                     </li>
                     <li style="list-style: none"><span><b>Актеры:</b>
                         {% for actor in movie.actors.all %}
-                            {{ actor.name }}
+                            <a href="{{ actor.get_absolute_url }}">
+                                    {{ actor.name }}
+                            </a>
                         {% endfor %}
                                 </span>
                     </li>

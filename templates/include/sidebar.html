@@ -9,58 +9,34 @@
     </form>
 </div>
 <!--preference -->
-<div class="left-side my-4">
-    <h3 class="sear-head editContent">Жанры</h3>
-    <ul class="w3layouts-box-list">
-        <li class="editContent">
-            <input type="checkbox" class="checked">
-            <span class="span editContent">Аниме</span>
-        </li>
-        <li class="editContent">
-            <input type="checkbox" class="checked">
-            <span class="span editContent">Боевики</span>
-        </li>
-        <li class="editContent">
-            <input type="checkbox" class="checked">
-            <span class="span editContent">Комедии</span>
-        </li>
-        <li class="editContent">
-            <input type="checkbox" class="checked">
-            <span class="span editContent">Ужасы</span>
-        </li>
-    </ul>
-</div>
-<!-- // preference -->
-<!-- discounts -->
-<div class="left-side">
-    <h3 class="sear-head editContent">Год</h3>
-    <ul class="w3layouts-box-list">
-        <li class="editContent">
-            <input type="checkbox" class="checked">
-            <span class="span editContent">2020</span>
-        </li>
-        <li class="editContent">
-            <input type="checkbox" class="checked">
-            <span class="span editContent">2019</span>
-        </li>
-        <li class="editContent">
-            <input type="checkbox" class="checked">
-            <span class="span editContent">2018</span>
-        </li>
-        <li>
-            <input type="checkbox" class="checked">
-            <span class="span editContent">2017</span>
-        </li>
-        <li class="editContent">
-            <input type="checkbox" class="checked">
-            <span class="span editContent">2016</span>
-        </li>
-        <li class="editContent">
-            <input type="checkbox" class="checked">
-            <span class="span editContent">2015</span>
-        </li>
-    </ul>
-</div>
+<form action="{% url 'filter' %}" method="get">
+    <div class="left-side my-4">
+        <h3 class="sear-head editContent">Жанры</h3>
+        <ul class="w3layouts-box-list">
+            {% for genre in view.get_genres %}
+                <li class="editContent">
+                    <input type="checkbox" class="checked" name="genre" value="{{ genre.id }}">
+                    <span class="span editContent">{{ genre.name }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- // preference -->
+    <!-- discounts -->
+
+    <div class="left-side">
+        <h3 class="sear-head editContent">Год</h3>
+        <ul class="w3layouts-box-list">
+            {% for movie in view.get_years %}
+                <li class="editContent">
+                    <input type="checkbox" class="checked" name="year" value="{{ movie.year }}">
+                    <span class="span editContent">{{ movie.year }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <button type="submit">Найти</button>
+</form>
 <!-- //discounts -->
 <!-- reviews -->
 <div class="customer-rev left-side my-4">

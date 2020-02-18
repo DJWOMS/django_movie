@@ -11,6 +11,7 @@ function ajaxSend(url, params) {
         .catch(error => console.error(error))
 }
 
+// Filter movies
 const forms = document.querySelector('form[name=filter]');
 
 forms.addEventListener('submit', function (e) {
@@ -57,3 +58,18 @@ let html = '\
         </div>\
     </div>\
 {{/movies}}'
+
+
+// Add star rating
+const rating = document.querySelector('form[name=rating]');
+
+rating.addEventListener("change", function (e) {
+    // Получаем данные из формы
+    let data = new FormData(this);
+    fetch(`${this.action}`, {
+        method: 'POST',
+        body: data
+    })
+        .then(response => alert("Рейтинг установлен"))
+        .catch(error => alert("Ошибка"))
+});

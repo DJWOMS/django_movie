@@ -1,11 +1,10 @@
 asgiref==3.2.3
 Click==7.0
-Django==3.0
+Django==3.0.3
+django-ckeditor==5.9.0
+django-js-asset==1.2.2
 h11==0.9.0
 httptools==0.0.13
-Pillow==6.2.1
+Pillow==7.0.0
 pytz==2019.3
 sqlparse==0.3.0
-uvicorn==0.11.1
-uvloop==0.14.0
-websockets==8.1

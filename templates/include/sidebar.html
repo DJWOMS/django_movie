@@ -1,11 +1,11 @@
 {% load movie_tag %}
 <div class="search-bar w3layouts-newsletter">
     <h3 class="sear-head editContent">Поиск фильма</h3>
-    <form action="#" method="post" class="d-flex editContent">
-        <input type="search" placeholder="Введите название..." name="search"
-               class="form-control" required="">
-        <button class="btn1 btn"><span class="fa fa-search"
-                                       aria-hidden="true"></span></button>
+    <form action="{% url 'search' %}" method="get" class="d-flex editContent">
+        <input type="search" placeholder="Введите название..." name="q" class="form-control" required="">
+        <button type="submit" class="btn1 btn">
+            <span class="fa fa-search" aria-hidden="true"></span>
+        </button>
     </form>
 </div>
 <!--preference -->

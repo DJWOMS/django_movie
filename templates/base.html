@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load static %}
+{% load static recaptcha3 %}
 <html lang="ru">
 <head>
     <!-- //Meta tag Keywords -->
@@ -22,6 +22,9 @@
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900"
           rel="stylesheet">
     <!-- //Fonts -->
+
+      {% recaptcha_init %}
+      {% recaptcha_ready action_name='homepage' %}
 </head>
 <body>
 <div id="page" class="page">

@@ -1,0 +1,11 @@
+<h3 class="footer-title text-uppercase editContent mb-lg-4 mb-3">
+    Newsletter</h3>
+
+<p class="editContent">By subscribing to our mailing list you will always
+    get latest news and updates from us.</p>
+<form action="{% url 'contact' %}" method="post" class="w3layouts-newsletter">
+    {% csrf_token %}
+    {{ contact_form }}
+    <button class="btn1 btn"><span class="fa fa-paper-plane-o" aria-hidden="true"></span>
+    </button>
+</form>

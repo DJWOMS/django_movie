@@ -1,3 +1,4 @@
+{% load contact_tags %}
 <footer class="editContent">
     <div class="container">
         <div class="row footer-top">
@@ -40,18 +41,7 @@
             </div>
             <div class="col-lg-8 footer-right">
                 <div class="w3layouts-news-letter">
-                    <h3 class="footer-title text-uppercase editContent mb-lg-4 mb-3">
-                        Newsletter</h3>
-
-                    <p class="editContent">By subscribing to our mailing list you will always
-                        get latest news and updates from us.</p>
-                    <form action="#" method="post" class="w3layouts-newsletter">
-                        <input type="email" name="Email" class="editContent"
-                               placeholder="Enter your email..." required="">
-                        <button class="btn1 btn"><span class="fa fa-paper-plane-o"
-                                                       aria-hidden="true"></span></button>
-
-                    </form>
+                    {% contact_form %}
                 </div>
                 <div class="row mt-lg-4 bottom-w3layouts-sec-nav mx-0">
                     <div class="col-md-4 footer-grid_section_w3layouts">

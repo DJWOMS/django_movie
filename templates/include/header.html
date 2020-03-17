@@ -1,4 +1,4 @@
-{% load movie_tag %}
+{% load i18n movie_tag %}
 <header class="header">
     <div class="container-fluid px-lg-5">
         <!-- nav -->
@@ -29,6 +29,24 @@
                 </li>
                 <li><a href="contact.html"
                        style="color: rgb(255, 255, 255); font-weight: 700; text-transform: uppercase;">Вход</a>
+                </li>
+
+                <li>
+                    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to }}">
+                        <select name="language">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                        selected{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="Go">
+                    </form>
                 </li>
             </ul>
         </nav>

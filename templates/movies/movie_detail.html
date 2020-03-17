@@ -1,5 +1,5 @@
 {% extends 'movies/base.html' %}
-{% load static %}
+{% load static i18n %}
 {% block title %} {{ movie.title }} {% endblock title %}
 {% block container %}
     <div class="container py-md-3">
@@ -22,15 +22,15 @@
                 <h5 class="editContent"></h5>
                 <ul>
                     <li style="list-style: none">
-                        <span><b>Год:</b> {{ movie.year }}</span></li>
+                        <span><b>{% trans 'Год' %}:</b> {{ movie.year }}</span></li>
                     <li style="list-style: none">
-                        <span><b>Страна:</b> {{ movie.country }}</span>
+                        <span><b>{% trans 'Страна' %}:</b> {{ movie.country }}</span>
                     </li>
                     <li style="list-style: none">
-                        <span><b>Слоган:</b> {{ movie.tagline }}</span>
+                        <span><b>{% trans 'Слоган' %}:</b> {{ movie.tagline }}</span>
                     </li>
                     <li style="list-style: none">
-                        <span><b>Режиссер:</b>
+                        <span><b>{% trans 'Режиссер' %}:</b>
                             {% for director in movie.directors.all %}
                                 <a href="{{ director.get_absolute_url }}">
                                     {{ director.name }}
@@ -38,7 +38,7 @@
                             {% endfor %}
                         </span>
                     </li>
-                    <li style="list-style: none"><span><b>Актеры:</b>
+                    <li style="list-style: none"><span><b>{% trans 'Актеры' %}:</b>
                         {% for actor in movie.actors.all %}
                             <a href="{{ actor.get_absolute_url }}">
                                     {{ actor.name }}
@@ -46,25 +46,25 @@
                         {% endfor %}
                                 </span>
                     </li>
-                    <li style="list-style: none"><span><b>Жанр:</b>
+                    <li style="list-style: none"><span><b>{% trans 'Жанр' %}:</b>
                         {% for genre in movie.genres.all %}
                             {{ genre.name }}
                         {% endfor %}
                                     </span>
                     </li>
                     <li>
-                        <span><b>Премьера в мире:</b> {{ movie.world_premiere }}</span>
+                        <span><b>{% trans 'Премьера в мире' %}:</b> {{ movie.world_premiere }}</span>
                     </li>
                     <li>
-                        <span><b>Бюджет:</b> ${{ movie.budget }}</span></li>
+                        <span><b>{% trans 'Бюджет' %}:</b> ${{ movie.budget }}</span></li>
                     <li>
-                        <span><b>Сборы в США:</b> ${{ movie.fees_in_usa }}</span></li>
+                        <span><b>{% trans 'Сборы в США' %}:</b> ${{ movie.fees_in_usa }}</span></li>
                     <li>
-                        <span><b>Сборы в мире:</b> ${{ movie.fess_in_world }}</span>
+                        <span><b>{% trans 'Сборы в мире' %}:</b> ${{ movie.fess_in_world }}</span>
                     </li>
                     <li>
                         <form action="{% url 'add_rating' %}" method="post" name="rating">
-                            <b>Рейтинг:</b>
+                            <b>{% trans 'Рейтинг' %}:</b>
                             {% csrf_token %}
                             <input type="hidden" value="{{ movie.id }}" name="movie">
                             <span class="rating">
@@ -108,7 +108,7 @@
         <div class="row sub-para-w3layouts mt-5">
 
             <h3 class="shop-sing editContent">
-                О фильме {{ movie.title }}
+                {% trans 'О фильме'  %} {{ movie.title }}
             </h3>
             <p>
                 {% for image in movie.movieshots_set.all %}
@@ -126,8 +126,9 @@
                 <!-- contact form grid -->
                 <div class="contact-single">
                     <h3 class="editContent">
-                        <span class="sub-tittle editContent">{{ movie.reviews_set.count }}</span>Оставить
-                        отзыв</h3>
+                        <span class="sub-tittle editContent">{{ movie.reviews_set.count }}</span>
+                        {% trans 'Оставить отзыв ' %}
+                    </h3>
                     <form action="{% url 'add_review' movie.id %}" method="post" class="mt-4"
                           id="formReview">
                         {% csrf_token %}

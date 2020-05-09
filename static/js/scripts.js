@@ -36,7 +36,7 @@ let html = '\
     <div class="col-md-4 product-men">\
         <div class="product-shoe-info editContent text-center mt-lg-4">\
             <div class="men-thumb-item">\
-                <img src="media/{{ poster }}" class="img-fluid" alt="">\
+                <img src="/media/{{ poster }}" class="img-fluid" alt="">\
             </div>\
             <div class="item-info-product">\
                 <h4 class="">\

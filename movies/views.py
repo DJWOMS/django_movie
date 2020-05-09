@@ -1,5 +1,6 @@
 from django.conf import settings
-from django.db.models import Q
+from django.db import models
+from django.db.models import Q, OuterRef, Subquery, Case, When
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import redirect
 from django.views.generic import ListView, DetailView
@@ -17,6 +18,15 @@ class GenreYear:
 
     def get_years(self):
         return Movie.objects.filter(draft=False).values("year")
+
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
 
 
 class MoviesView(GenreYear, ListView):

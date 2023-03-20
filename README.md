@@ -22,4 +22,10 @@
 - Отзывы
 - Фильтры
 
+# Установка
 
+    pip install req.txt
+    
+# Старт
+
+    python manage.py runserver

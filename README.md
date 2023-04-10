@@ -43,4 +43,3 @@
 
     python manage.py runserver
 
-# Админка

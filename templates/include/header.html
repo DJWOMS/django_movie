@@ -48,7 +48,7 @@
 
                 <li>
                     <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                        <input name="next" type="hidden" value="{{ redirect_to }}">
+                        <input name="next" type="hidden" value="{{ language.code }}/{{ request.get_full_path|slice:'4:' }}">
                         <select name="language">
                             {% get_current_language as LANGUAGE_CODE %}
                             {% get_available_languages as LANGUAGES %}
